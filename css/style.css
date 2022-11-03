@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#content {
+    width: 600px;
+    margin: 25px auto 0 auto;
+    border: 1px solid black;
+    text-align: center;
+    font-family: 'Tahoma', sans-serif;
+    padding: 10px 0;
+}
+
+.player-box {
+    display: inline-block;
+    width: 50%;
+}
+
+.player-box .player-box__name {
+    display: inline-block;
+    width: 100%;
+    font-size: 1.5em;
+}
+
+
+.player-box .player-box__punch, .player-box .player-box__score {
+    display: inline-block;
+    width: 90%;
+    margin-top: 7px;
+    color: white;
+    border-radius: 10px;
+}
+
+.player-box .player-box__score.player-box__score_winner {
+    background: lime;
+    color: black;
+}
+
+.player-box .player-box__score.player-box__score_loser {
+    background: red;
+    color: black;
+}
+
+.player-box .player-box__score {
+    background: blue;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.3em;
+}
+
+.player-box .player-box__punch {
+    background: teal;
+    height: 80px;
+    line-height: 80px;
+    font-size: 1.5em;
+}
+
+.action-button {
+    display: inline-block;
+    color: white;
+    background: cornflowerblue;
+    margin: 10px 0;
+    width: 60%;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.action-button:hover {
+    transition: background 0.3s ease;
+    background: darkblue;
+}
+
+.action-button .action-button_try-again {
+    transition: background 0.3s ease;
+    background: crimson;
+}
+
+.action-button .action-button_try-again:hover {
+    transition: background 0.3s ease;
+    background: darkred;
+}
+
+@media screen and (max-width: 620px) {
+    body {font-size: 13px;}
+    #content {width: 95%;}
+}
+
+@media screen and (max-width: 269px) {
+    .action-button {width: 95%;}
+    .player-box {width: 100%;}
+    .player-box:nth-child(2) {margin-top: 7px;}
+}
